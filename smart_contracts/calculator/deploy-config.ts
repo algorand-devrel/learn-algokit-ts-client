@@ -7,10 +7,14 @@ export async function deploy() {
 
   const algod = algokit.getAlgoClient()
   const indexer = algokit.getAlgoIndexerClient()
-  const deployer = await algokit.getAccount(
-    { config: algokit.getAccountConfigFromEnvironment('DEPLOYER'), fundWith: algokit.algos(3) },
+  const deployer = await algokit.mnemonicAccountFromEnvironment(
+    {
+      name: 'DEPLOYER',
+      fundWith: algokit.algos(3),
+    },
     algod,
   )
+
   await algokit.ensureFunded(
     {
       accountToFund: deployer,
