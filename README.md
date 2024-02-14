@@ -17,7 +17,8 @@ This project is meant to be cloned and used to follow along the [AlgoKit App Cli
 2. Go into the `smart_contract` folder by running `cd smart_contract`
 3. Generate ts client with `algokit generate client artifacts/ --output artifacts/client.ts`. Learn more about `algokit generate` [here](https://github.com/algorandfoundation/algokit-cli/blob/main/docs/features/generate.md)
 4. Ensure you have Docker running and launch Localnet with `algokit localnet start`
-5. Run the `deploy.ts` file by running `npm run deploy` in the **smart_contract folder**
+5. copy everything inside of `.env.localnet.template` file into `.env` file.
+6. Run the `deploy.ts` file by running `npm run deploy` in the **smart_contract folder**
 
 ## Tools
 
