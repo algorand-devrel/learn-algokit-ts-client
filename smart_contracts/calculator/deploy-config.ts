@@ -15,10 +15,6 @@ export async function deploy() {
     algod,
   )
 
-  // getAccount(
-  //   { config: algokit.getAccountConfigFromEnvironment('DEPLOYER'), fundWith: algokit.algos(3) },
-  //   algod,
-  // )
   await algokit.ensureFunded(
     {
       accountToFund: deployer,
